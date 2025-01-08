@@ -1,0 +1,17 @@
+<form th:action="@{/shipping/new}" th:object="${shippingForm}" method="post">
+    <div>
+        <label>Order ID:</label>
+        <input type="text" th:field="*{orderId}" />
+    </div>
+    <div>
+        <label>운송장번호:</label>
+        <input type="text" th:field="*{trackingNumber}" />
+    </div>
+    <div>
+        <label>택배사:</label>
+        <input type="text" th:field="*{carrier}" />
+    </div>
+    <div>
+        <button type="submit">등록</button>
+    </div>
+</form>
