@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>배송 목록</title>
+</head>
+<body>
+<h1>배송 목록</h1>
+<a th:href="@{/shipping/new}">배송 등록</a>
+<hr/>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Order ID</th>
+        <th>운송장번호</th>
+        <th>택배사</th>
+        <th>추적 링크</th>
+    </tr>
+    <tbody th:each="ship : ${shippings}">
+    <tr>
+        <td th:text="${ship.id}"></td>
+        <td th:text="${ship.orderId}"></td>
+        <td th:text="${ship.trackingNumber}"></td>
+        <td th:text="${ship.carrier}"></td>
+        <td>
+            <a th:href="@{/shipping/{id}/track(id=${ship.id})}" target="_blank">운송장 추적</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
