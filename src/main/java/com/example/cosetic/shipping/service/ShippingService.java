@@ -19,7 +19,7 @@ public class ShippingService {
     private static final Map<String, String> COURIER_URLS = new HashMap<>() {{
         put("CJ대한통운", "https://www.cjlogistics.com/ko/tool/parcel/tracking?gnbInvcNo=");
         put("한진택배", "http://www.hanjin.co.kr/kor/CMS/DeliveryMgr/WaybillResult.do?mCode=MN038&wblNum=");
-        put("로젠택배", "https://www.ilogen.com/web/personal/trace/");
+
         // 필요한 다른 택배사도 추가
     }};
 
